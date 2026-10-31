@@ -1,0 +1,10 @@
+Options -Indexes
+RewriteEngine On
+
+RewriteRule ^(?:\.git|data|node_modules|scripts)(?:/|$) - [F,NC,L]
+RewriteRule ^(?:server\.js|package(?:-lock)?\.json|README\.md|\.gitignore)$ - [F,NC,L]
+RewriteRule ^api/config(?:\..*)?\.php$ - [F,NC,L]
+RewriteRule ^.*\.(?:sqlite|sqlite3|db|sql|csv)$ - [F,NC,L]
+RewriteRule ^api/?$ api/index.php [QSA,L]
+RewriteRule ^api/(?!index\.php$).+$ api/index.php [QSA,L]
+RewriteRule ^aa/?$ /index.html#/aa [R=302,L,NE]

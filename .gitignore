@@ -1,0 +1,5 @@
+node_modules/
+data/
+api/config.php
+mysql-migration.sql
+account-reset-codes.csv
